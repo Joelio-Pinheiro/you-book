@@ -10,10 +10,12 @@
 	<title>You book</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/estilo.css">
 </head>
 
 <body class="homepage is-preload">
+	
 	<div id="page-wrapper">
 
 		<!-- Header -->
@@ -27,9 +29,28 @@
 				<ul>
 					<li class="current"><a href="index.html">Home</a></li>
 					<li><a href="livros.html">Livros</a></li>
-					<li><a href="#footer">Contato</a></li>
-					<li>Pesquisa</li>
+					<li><a href="apostilas.html">Apostilas</a></li>
 					<li><a href="#footer">Sobre</a></li>
+					<li>
+						<div class="busca">
+							<div class="icone"></div>
+							<div class="entrar">
+								<input type="text" name="" id="mbusca" placeholder="Buscar">
+							</div>
+							<sapn class="limpar" id="lmpa"></sapn>
+						</div>
+						<script>
+							const icone = document.querySelector('.icone');
+							const barra = document.querySelector('.busca');
+							const lmp = document.querySelector('.lmpa');
+							icone.onclick = function(){
+								barra.classList.toggle('active');
+							}
+							lmp.onclick = function(){
+								barra.classList.toggle('busca');
+							}
+						</script>
+					</li>
 				</ul>
 			</nav>
 
@@ -37,7 +58,7 @@
 			<section id="banner">
 				<header>
 					<h2>Biblioteca Online</h2>
-					<p>O Conhecimento é a Chave Para a Liberdade</p>
+					<p>O Conhecimento é a Chave Para a Liberdade!</p>
 				</header>
 			</section>
 
@@ -83,7 +104,9 @@
 		</section>
 
 		<!-- Main -->
+		
 		<section id="main">
+			
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -96,7 +119,8 @@
 							<div class="row">
 								<div class="col-4 col-6-medium col-12-small">
 									<section class="box">
-										<a href="#" class="image featured"><img src="images/41897yAI4LL._SX346_BO1,204,203,200_.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img
+												src="images/41897yAI4LL._SX346_BO1,204,203,200_.jpg" alt="" /></a>
 										<header>
 											<h3>Harry Potter e a Pedra Filosofal</h3>
 										</header>
@@ -108,34 +132,36 @@
 										</footer>
 									</section>
 								</div>
-									<div class="col-4 col-6-medium col-12-small">
-										<section class="box">
-											<a href="#" class="image featured"><img src="images/41897yAI4LL._SX346_BO1,204,203,200_.jpg" alt="" /></a>
-											<header>
-												<h3>Harry Potter e a Pedra Filosofal</h3>
-											</header>
-											MAIS...
-											<footer>
-												<ul class="actions">
-													<li><a href="descrição.html" class="button alt">Ver mais</a></li>
-												</ul>
-											</footer>
-										</section>
-									</div>
-									<div class="col-4 col-6-medium col-12-small">
-										<section class="box">
-											<a href="#" class="image featured"><img src="images/41897yAI4LL._SX346_BO1,204,203,200_.jpg" alt="" /></a>
-											<header>
-												<h3>Harry Potter e a Pedra Filosofal</h3>
-											</header>
-											MAIS...
-											<footer>
-												<ul class="actions">
-													<li><a href="descrição.html" class="button alt">Ver mais</a></li>
-												</ul>
-											</footer>
-										</section>
-									</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<section class="box">
+										<a href="#" class="image featured"><img
+												src="images/41897yAI4LL._SX346_BO1,204,203,200_.jpg" alt="" /></a>
+										<header>
+											<h3>Harry Potter e a Pedra Filosofal</h3>
+										</header>
+										MAIS...
+										<footer>
+											<ul class="actions">
+												<li><a href="descrição.html" class="button alt">Ver mais</a></li>
+											</ul>
+										</footer>
+									</section>
+								</div>
+								<div class="col-4 col-6-medium col-12-small">
+									<section class="box">
+										<a href="#" class="image featured"><img
+												src="images/41897yAI4LL._SX346_BO1,204,203,200_.jpg" alt="" /></a>
+										<header>
+											<h3>Harry Potter e a Pedra Filosofal</h3>
+										</header>
+										MAIS...
+										<footer>
+											<ul class="actions">
+												<li><a href="descrição.html" class="button alt">Ver mais</a></li>
+											</ul>
+										</footer>
+									</section>
+								</div>
 							</div>
 						</section>
 
@@ -198,7 +224,7 @@
 									<h3>Endereço</h3>
 									<p>
 										E.E.E.P. Professor Francisco Aristóteles de Sousa<br />
-										R. Boa Esperança - Ponto da Serra<br/>
+										R. Boa Esperança - Ponto da Serra<br />
 										Itaitinga - CE, 61880-000
 									</p>
 								</li>
@@ -230,13 +256,15 @@
 	</div>
 
 	<!-- Scripts -->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.dropotron.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-
+	
+	
 </body>
 
 </html>
