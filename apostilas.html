@@ -26,8 +26,27 @@
 							<li ><a href="index.html">Home</a></li>
 							<li ><a href="livros.html">Livros</a></li>
 							<li class="current"><a href="left-sidebar.html">Apostilas</a></li>
-							<li>Pesquisa</li>
 							<li><a href="#footer">Sobre</a></li>
+							<li>
+								<div class="busca">
+									<div class="icone"></div>
+									<div class="entrar">
+										<input type="text" name="" id="mbusca" placeholder="Buscar">
+									</div>
+									<sapn class="limpar" id="lmpa"></sapn>
+								</div>
+								<script>
+									const icone = document.querySelector('.icone');
+									const barra = document.querySelector('.busca');
+									const lmp = document.querySelector('.lmpa');
+									icone.onclick = function(){
+										barra.classList.toggle('active');
+									}
+									lmp.onclick = function(){
+										barra.classList.toggle('busca');
+									}
+								</script>
+							</li>
 						</ul>
 					</nav>
 
@@ -144,37 +163,34 @@
 			<div class="col-4 col-6-medium col-12-small">
 				<section>
 					<header>
-						<h2>Tempus consequat</h2>
 					</header>
 					<ul class="divided">
-						<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-						<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-						<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-						<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-						<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-						<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+						<li><img src="images/360x600.png" alt="" style="width: 25%;"></li>
+						O conhecimento é em si mesmo um poder. Não existe transformação sem aprendizado e conhecimento. O maior inimigo do conhecimento não é 
+						ignorância, mas a ilusão do conhecimento. Só temos certezas enquanto sabemos pouco; com o conhecimento as dúvidas aumentam.
 					</ul>
 				</section>
 			</div>
 			<div class="col-4 col-6-medium col-12-small">
 				<section>
 					<header>
-						<h2>Ipsum et phasellus</h2>
+						<h2>Programadores</h2>
 					</header>
 					<ul class="divided">
-						<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
-						<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
-						<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
-						<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
-						<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
-						<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+						<li>Joélio</li>
+						<li>Paulo Hugo</li>
+						<li>Valter</li>
+						<li>Miguel Arthut</li>
+						<li>Joélio</li>
+						<li>Paulo Hugo</li>
+						<li>Valter</li>
 					</ul>
 				</section>
 			</div>
 			<div class="col-4 col-12-medium">
 				<section>
 					<header>
-						<h2>Vitae tempor lorem</h2>
+						<h2>Contatos</h2>
 					</header>
 					<ul class="social">
 						<li><a class="icon brands fa-facebook-f" href="#"><span
@@ -192,7 +208,7 @@
 							<h3>Endereço</h3>
 							<p>
 								E.E.E.P. Professor Francisco Aristóteles de Sousa<br />
-								R. Boa Esperança - Ponto da Serra<br/>
+								R. Boa Esperança - Ponto da Serra<br />
 								Itaitinga - CE, 61880-000
 							</p>
 						</li>

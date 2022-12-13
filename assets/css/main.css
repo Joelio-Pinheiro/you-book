@@ -33,7 +33,7 @@
 }
 
 #des {
-	margin-top: 30%;
+	margin-top: 20%;
 	font-size: 20px;
 }
 
@@ -343,10 +343,48 @@ table {
 }
 
 @media screen and (max-width: 1680px) {
-
-	.container {
-		width: 70em;
+	#img1{
+		max-width: 82%;
+		max-height: 700px;
+		margin-top: 20px;
+		margin-left: 20px;
+		align-items: center; 
+		justify-content: center;
 	}
+	.imgp{
+		display: flex;
+		flex-direction: column;
+		margin-left: 0;
+		position: relative;
+	}
+	#carac{
+		max-width: 55%;
+		word-wrap: break-word;
+		margin-bottom: 0;
+	}
+	#titulo{
+		font-size: 35px;
+	}
+	#des{
+		margin-top: 30%;
+		font-size: 20px;
+	}
+	#compra{
+		margin-top: 25px;
+		position: relative;
+		background: black;
+		color: white;
+		padding: 7px;
+		border-radius: 10px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		transition: background .5s;
+	}
+	#compra:hover {
+		background:rgba(0, 0, 0, 0.75);
+		cursor: pointer;
+	}
+
 
 }
 
@@ -3103,10 +3141,10 @@ ul.social li a.fa-google-plus:hover {
 }.busca{
     position: relative;
 	top: 20px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: #fff;
-    border-radius: 60px;
+    border-radius: 50px;
     transition: 0.5s;
     box-shadow: 0 0 0 5px #ef2540;
     overflow: hidden;
@@ -3134,7 +3172,7 @@ ul.social li a.fa-google-plus:hover {
     position: absolute;
     width: 15px;
     height: 15px;
-    border: 3px solid #287dfc;
+    border: 3px solid #ef2540;
     border-radius: 50%;
     transform: translate(-4px,-4px) ;
 }
