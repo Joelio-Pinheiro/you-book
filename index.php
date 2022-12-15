@@ -1,3 +1,6 @@
+<?php
+include('conexao.php');
+?>
 <!DOCTYPE HTML>
 <!--
 	Dopetrope by HTML5 UP
@@ -10,8 +13,7 @@
 	<title>You book</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="/assets/css/main.css">
-	<link rel="stylesheet" href="/assets/css/estilo.css">
+	<link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body class="homepage is-preload">
@@ -80,12 +82,21 @@
 								<h2>Destaques</h2>
 							</header>
 							<div class="row">
+								<?php
+							$livro = "SELECT * FROM livro";
+                		$result = mysqli_query($conexao, $livro);
+                		$linha = mysqli_fetch_assoc($result);
+                		$total = mysqli_num_rows($result);
+						$cont = 0;
+                		if($total > 0){
+                	    	do{
+               	 		?>
 								<div class="col-4 col-6-medium col-12-small">
 									<section class="box">
 										<a href="#" class="image featured"><img
-												src="images/41897yAI4LL._SX346_BO1,204,203,200_.jpg" alt="" /></a>
+												src="<?=$linha['capa']?>" alt="" /></a>
 										<header>
-											<h3>Harry Potter e a Pedra Filosofal</h3>
+											<h3><?=$linha['nome']?></h3>
 										</header>
 										<footer>
 											<ul class="actions">
@@ -94,39 +105,16 @@
 										</footer>
 									</section>
 								</div>
-								<div class="col-4 col-6-medium col-12-small">
-									<section class="box">
-										<a href="#" class="image featured"><img
-												src="images/41897yAI4LL._SX346_BO1,204,203,200_.jpg" alt="" /></a>
-										<header>
-											<h3>Harry Potter e a Pedra Filosofal</h3>
-										</header>
-										
-										<footer>
-											<ul class="actions">
-												<li><a href="descrição.html" class="button alt">Ver mais</a></li>
-											</ul>
-										</footer>
-									</section>
-								</div>
-								<div class="col-4 col-6-medium col-12-small">
-									<section class="box">
-										<a href="#" class="image featured"><img
-												src="images/41897yAI4LL._SX346_BO1,204,203,200_.jpg" alt="" /></a>
-										<header>
-											<h3>Harry Potter e a Pedra Filosofal</h3>
-										</header>
-										
-										<footer>
-											<ul class="actions">
-												<li><a href="descrição.html" class="button alt">Ver mais</a></li>
-											</ul>
-										</footer>
-									</section>
-								</div>
+								<?php
+                    $cont++;
+                    if($cont >= 3){
+                        break;
+                    }
+                    }while($linha = mysqli_fetch_assoc($result));
+                }
+                ?>
 							</div>
 						</section>
-
 					</div>
 					<div class="col-12">
 		</section>

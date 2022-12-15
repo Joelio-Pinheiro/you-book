@@ -3138,7 +3138,8 @@ ul.social li a.fa-google-plus:hover {
 		padding: 40px 0 20px 0;
 	}
 
-}.busca{
+}
+.busca{
     position: relative;
 	top: 20px;
     width: 50px;
@@ -3232,5 +3233,4 @@ ul.social li a.fa-google-plus:hover {
     height: 15px;
     background: #999;
     transform: rotate(-45deg);
-}
-	
+}	
