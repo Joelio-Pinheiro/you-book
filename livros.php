@@ -21,23 +21,25 @@ include('conexao.php');
 				<section id="header">
 
 					<!-- Logo -->
-						<h1><a href="index.html">You book</a></h1>
+						<h1><a href="index.php">You book</a></h1>
 
 					<!-- Nav -->
 					<nav id="nav">
 						<ul>
-							<li ><a href="index.html">Home</a></li>
-							<li class="current"><a href="left-sidebar.html">Livros</a></li>
-							<li><a href="apostilas.html">Apostilas</a></li>
+							<li ><a href="index.php">Home</a></li>
+							<li class="current"><a href="livros.php">Livros</a></li>
+							<li><a href="apostilas.php">Apostilas</a></li>
 							<li><a href="#footer">Sobre</a></li>
 							<li>
+							<form action="pesquisa.php" method="get">
 								<div class="busca">
 									<div class="icone"></div>
 									<div class="entrar">
-										<input type="text" name="" id="mbusca" placeholder="Buscar">
+										<input type="text" name="pesq" id="mbusca" placeholder="Buscar">
 									</div>
-									<sapn class="limpar" id="lmpa"></sapn>
+									<sapn class="" id="lmpa"></sapn>
 								</div>
+							</form>
 								<script>
 									const icone = document.querySelector('.icone');
 									const barra = document.querySelector('.busca');
@@ -69,7 +71,7 @@ include('conexao.php');
 							</header>
 							<div class="row">
 								<?php
-							$livro = "SELECT * FROM livro";
+							$livro = "SELECT * FROM livro WHERE apostila=0";
                 	$result = mysqli_query($conexao, $livro);
                 	$linha = mysqli_fetch_assoc($result);
                 	$total = mysqli_num_rows($result);
@@ -84,7 +86,7 @@ include('conexao.php');
 										</header>
 										<footer>
 											<ul class="actions">
-												<li><a href="descrição.html" class="button alt">Ver mais</a></li>
+												<li><a href="descrição.php?id=<?=$linha['id']?>" class="button alt">Ver mais</a></li>
 											</ul>
 										</footer>
 									</section>

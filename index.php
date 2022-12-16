@@ -24,35 +24,37 @@ include('conexao.php');
 		<section id="header">
 
 			<!-- Logo -->
-			<h1><a href="index.html">You book</a></h1>
+			<h1><a href="index.php">You book</a></h1>
 
 			<!-- Nav -->
 			<nav id="nav">
 				<ul>
-					<li class="current"><a href="index.html">Home</a></li>
-					<li><a href="livros.html">Livros</a></li>
-					<li><a href="apostilas.html">Apostilas</a></li>
+					<li class="current"><a href="index.php">Home</a></li>
+					<li><a href="livros.php">Livros</a></li>
+					<li><a href="apostilas.php">Apostilas</a></li>
 					<li><a href="#footer">Sobre</a></li>
 					<li>
-						<div class="busca">
-							<div class="icone"></div>
-							<div class="entrar">
-								<input type="text" name="" id="mbusca" placeholder="Buscar">
-							</div>
-							<sapn class="limpar" id="lmpa"></sapn>
-						</div>
-						<script>
-							const icone = document.querySelector('.icone');
-							const barra = document.querySelector('.busca');
-							const lmp = document.querySelector('.lmpa');
-							icone.onclick = function(){
-								barra.classList.toggle('active');
-							}
-							lmp.onclick = function(){
-								barra.classList.toggle('busca');
-							}
-						</script>
-					</li>
+							<form action="pesquisa.php" method="get">
+								<div class="busca">
+									<div class="icone"></div>
+									<div class="entrar">
+										<input type="text" name="pesq" id="mbusca" placeholder="Buscar">
+									</div>
+									<sapn class="" id="lmpa"></sapn>
+								</div>
+							</form>
+								<script>
+									const icone = document.querySelector('.icone');
+									const barra = document.querySelector('.busca');
+									const lmp = document.querySelector('.lmpa');
+									icone.onclick = function(){
+										barra.classList.toggle('active');
+									}
+									lmp.onclick = function(){
+										barra.classList.toggle('busca');
+									}
+								</script>
+							</li>
 				</ul>
 			</nav>
 
@@ -100,7 +102,7 @@ include('conexao.php');
 										</header>
 										<footer>
 											<ul class="actions">
-												<li><a href="descrição.html" class="button alt">Ver mais</a></li>
+												<li><a href="descrição.php?id=<?=$linha['id']?>" class="button alt">Ver mais</a></li>
 											</ul>
 										</footer>
 									</section>
